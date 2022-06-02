@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/exploreFragment"
+        android:title="Explore"
+        android:icon="@drawable/outline_travel_explore_24" />
+
+    <item android:id="@+id/mapFragment"
+        android:title="Near me"
+        android:icon="@drawable/outline_near_me_24" />
+
+    <item android:id="@+id/bookmarkFragment"
+        android:title="Saved"
+        android:icon="@drawable/outline_bookmark_border_24" />
+
+    <item android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/outline_person_outline_24" />
+
+</menu>

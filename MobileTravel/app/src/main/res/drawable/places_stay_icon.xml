@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@drawable/hotel"
+        android:width="40pt"
+        android:height="40pt"
+        />
+</layer-list >

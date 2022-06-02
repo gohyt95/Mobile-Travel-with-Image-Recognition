@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/exploreFragment">
+
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.example.mobiletravel.ExploreFragment"
+        android:label="Explore"
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_exploreFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_placeDetailFragment"
+            app:destination="@id/placeDetailFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_nearbyPlaceFragment"
+            app:destination="@id/nearbyPlaceFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_cameraResultFragment"
+            app:destination="@id/cameraResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.mobiletravel.BookmarkFragment"
+        android:label="Saved"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_placeDetailFragment"
+            app:destination="@id/placeDetailFragment" />
+        <action
+            android:id="@+id/action_bookmarkFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_bookmarkFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.mobiletravel.MapFragment"
+        android:label="Near Me"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_placeDetailFragment"
+            app:destination="@id/placeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mobiletravel.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.example.mobiletravel.SearchResultFragment"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" >
+        <argument
+            android:name="searchQuery"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_searchResultFragment_to_placeDetailFragment"
+            app:destination="@id/placeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeDetailFragment"
+        android:name="com.example.mobiletravel.PlaceDetailFragment"
+        android:label="fragment_place_detail"
+        tools:layout="@layout/fragment_place_detail" />
+    <fragment
+        android:id="@+id/nearbyPlaceFragment"
+        android:name="com.example.mobiletravel.NearbyPlaceFragment"
+        android:label="fragment_nearby_place"
+        tools:layout="@layout/fragment_nearby_place" >
+        <argument
+            android:name="placeType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nearbyPlaceFragment_to_placeDetailFragment"
+            app:destination="@id/placeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.mobiletravel.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment4"
+            app:destination="@id/signUpFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment4"
+        android:name="com.example.mobiletravel.SignUpFragment"
+        android:label="SignUpFragment" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.mobiletravel.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.mobiletravel.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/cameraResultFragment"
+        android:name="com.example.mobiletravel.cameraResultFragment"
+        android:label="cameraResultFragment" >
+        <argument
+            android:name="recognitionResult"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cameraResultFragment_to_placeDetailFragment"
+            app:destination="@id/placeDetailFragment" />
+    </fragment>
+</navigation>
